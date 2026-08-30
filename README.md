@@ -1,4 +1,6 @@
-# Chest Content Finder
+<p align="center">
+  <img src="assets/banner.png" alt="Chest Content Finder">
+</p>
 
 Client-side Fabric mod for Minecraft 26.1 and 26.2. Looks for an item in generated structures: locates one, teleports you there in spectator, switches to creative to open containers, repeats until it finds it. Locate, teleport and gamemode go through the integrated server, not chat commands.
 
@@ -13,6 +15,18 @@ Client-side Fabric mod for Minecraft 26.1 and 26.2. Looks for an item in generat
 ```
 
 `/finder` is an alias.
+
+<p align="center">
+  <img src="assets/command.png" alt="Typing /finder with item and structure suggestions">
+</p>
+
+<p align="center"><sub>Tab complete: items that drop in structure loot, then the matching structures.</sub></p>
+
+<p align="center">
+  <img src="assets/process.png" alt="Search messages in chat: start, pause, resume, containers found, stop">
+</p>
+
+<p align="center"><sub>Search starts, you sneak to pause or resume, sneak twice to stop.</sub></p>
 
 Tab complete works. Structure suggestions are filtered by loot table in singleplayer only (loot tables aren't sent to clients). In multiplayer you get the full list.
 
