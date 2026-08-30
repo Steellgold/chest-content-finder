@@ -1,0 +1,24 @@
+{
+  "chestcontentfinder.command.no_structure": "No structure is known to contain %s.",
+  "chestcontentfinder.command.unknown_structure": "Unknown structure: %s",
+  "chestcontentfinder.command.loot_mismatch": "Warning: no loot table links %s to %s.",
+  "chestcontentfinder.command.unknown_item": "Unknown item: %s",
+  "chestcontentfinder.command.not_in_loot": "No structure loot table drops %s.",
+  "chestcontentfinder.command.need_host": "This only works in singleplayer, or when you host the LAN world.",
+  "chestcontentfinder.command.typed": "This command has to be typed manually.",
+  "chestcontentfinder.command.invalid_id": "Invalid identifier: %s",
+
+  "chestcontentfinder.search.started.one": "Searching for %s in 1 structure.",
+  "chestcontentfinder.search.started": "Searching for %s in %s structures.",
+  "chestcontentfinder.search.hint": "Sneak to pause, sneak twice to stop.",
+  "chestcontentfinder.search.idle": "No search is running.",
+  "chestcontentfinder.search.already_paused": "The search is already paused.",
+  "chestcontentfinder.search.paused": "Search paused. Sneak to resume, sneak twice to stop.",
+  "chestcontentfinder.search.not_paused": "The search is not paused.",
+  "chestcontentfinder.search.resumed": "Search resumed.",
+  "chestcontentfinder.search.stopped": "Search stopped.",
+  "chestcontentfinder.search.scan.one": "Found 1 container near %s, opening it.",
+  "chestcontentfinder.search.scan": "Found %s containers near %s, opening them.",
+  "chestcontentfinder.search.found": "Found %s at %s after checking %s container(s) across %s structure(s).",
+  "chestcontentfinder.search.relocate": "Nothing here (%s container(s) checked), moving on."
+}

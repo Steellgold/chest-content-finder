@@ -1,0 +1,66 @@
+# Publishes a release to GitHub and Modrinth.
+#
+# Trigger it by pushing a tag, e.g. `git tag v1.0.0+26.2 && git push --tags`,
+# or manually from the Actions tab.
+#
+# Required repository secrets:
+#   MODRINTH_TOKEN    - https://modrinth.com/settings/pats (scope: create versions)
+name: Publish
+
+on:
+  push:
+    tags: [ 'v*' ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  # What this jar is built with. Must match build.gradle (Java 25).
+  JAVA_VERSION: "25"
+  # Versions listed on Modrinth for this jar. Add a line if the same build also runs on another release.
+  MINECRAFT_VERSIONS: |
+    26.1
+    26.2
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build
+        run: ./gradlew build --stacktrace
+
+      - name: Read mod version
+        id: version
+        run: echo "value=$(grep '^version=' gradle.properties | cut -d= -f2)" >> "$GITHUB_OUTPUT"
+
+      - name: Publish
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          modrinth-id: ${{ vars.MODRINTH_ID }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+          name: Chest Content Finder ${{ steps.version.outputs.value }}
+          version: ${{ steps.version.outputs.value }}
+          version-type: release
+          changelog-file: CHANGELOG.md
+
+          loaders: fabric
+          game-versions: ${{ env.MINECRAFT_VERSIONS }}
+          java: ${{ env.JAVA_VERSION }}
+          dependencies: |
+            fabric-api(required)

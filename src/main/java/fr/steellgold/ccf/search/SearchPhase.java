@@ -1,0 +1,14 @@
+package fr.steellgold.ccf.search;
+
+enum SearchPhase {
+	IDLE,
+	LOCATE,
+	AWAIT_LOCATE,
+	TELEPORT_TO_STRUCTURE,
+	AWAIT_CHUNKS,
+	SCAN,
+	APPROACH_CONTAINER,
+	OPEN_CONTAINER,
+	READ_CONTAINER,
+	RELOCATE
+}

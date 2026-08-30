@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "chestcontentfinder",
+  "version": "${version}",
+  "name": "Chest Content Finder",
+  "description": "Locates structures and opens their containers until it finds the item you asked for.",
+  "authors": [
+    "Gaëtan H"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Steellgold/chest-content-finder",
+    "sources": "https://github.com/Steellgold/chest-content-finder",
+    "issues": "https://github.com/Steellgold/chest-content-finder/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/chestcontentfinder/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["fr.steellgold.ccf.Finder"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "${minecraft_dep}",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

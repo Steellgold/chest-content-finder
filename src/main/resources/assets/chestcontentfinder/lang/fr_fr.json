@@ -1,0 +1,24 @@
+{
+  "chestcontentfinder.command.no_structure": "Aucune structure n'est connue pour contenir %s.",
+  "chestcontentfinder.command.unknown_structure": "Structure inconnue : %s",
+  "chestcontentfinder.command.loot_mismatch": "Attention : aucune table de loot ne relie %s à %s.",
+  "chestcontentfinder.command.unknown_item": "Item inconnu : %s",
+  "chestcontentfinder.command.not_in_loot": "Aucune table de loot de structure ne drop %s.",
+  "chestcontentfinder.command.need_host": "Ça ne marche qu'en solo, ou si tu héberges le monde en LAN.",
+  "chestcontentfinder.command.typed": "Cette commande doit être tapée à la main.",
+  "chestcontentfinder.command.invalid_id": "Identifiant invalide : %s",
+
+  "chestcontentfinder.search.started.one": "Recherche de %s dans 1 structure.",
+  "chestcontentfinder.search.started": "Recherche de %s dans %s structures.",
+  "chestcontentfinder.search.hint": "Sneak pour mettre en pause, sneak deux fois pour arrêter.",
+  "chestcontentfinder.search.idle": "Aucune recherche en cours.",
+  "chestcontentfinder.search.already_paused": "La recherche est déjà en pause.",
+  "chestcontentfinder.search.paused": "Recherche en pause. Sneak pour reprendre, sneak deux fois pour arrêter.",
+  "chestcontentfinder.search.not_paused": "La recherche n'est pas en pause.",
+  "chestcontentfinder.search.resumed": "Recherche reprise.",
+  "chestcontentfinder.search.stopped": "Recherche arrêtée.",
+  "chestcontentfinder.search.scan.one": "1 conteneur trouvé près de %s, ouverture.",
+  "chestcontentfinder.search.scan": "%s conteneurs trouvés près de %s, ouverture.",
+  "chestcontentfinder.search.found": "Trouvé %s en %s après %s conteneur(s) dans %s structure(s).",
+  "chestcontentfinder.search.relocate": "Rien ici (%s conteneur(s) vérifiés), on continue."
+}
